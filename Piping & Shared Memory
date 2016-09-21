@@ -1,0 +1,17 @@
+Pipes and shared memory are two ways of communicating information across programs.
+
+Pipes work by sending an output which is recieved as input by another program. This can be accomplished by stdout and stdin in the
+programs, and then program_1|program_2 in the terminal. There is another method, too, a more permanent type of pipe, called First In
+First Out (FIFO), or a named pipe. Named pipe are stored separately on the file system, and can be used by many different, unrelated
+programs. The idea behind First In First Out is that some amount of information is stored in the pipe. The older information is pushed out
+to become input of a piped program when new information is pushed into the named pipe. Named pipes remain in the system for future use.
+
+Shared Memory works by linking together several programs into a common memory or storage space. Shared memory differs from the piped
+perspective in that it requires all the programs to be synced. Thus, programs will have to wait for each other to be done updating, or
+there may be some kind of lost update error. Pipes are instantaneous and suffer no such need. Shared memory is more flexible, compared to
+the piped workflow, where only two programs can be piped together, and the pipeline must proceed essentially sequentially. Share memory,
+on the other hand, allows for many different programs to access the same information. However, shared memory is also much more difficult to
+code, most notably because of the need to check for updates in intervals (continuously being impractical and impossible).
+
+In my opinion, piping is the better choice. I find it neater and very attractive. Shared memory can easily get messy and bogged down, while
+piping is fast and neat, and greating for calling many modular programs like functions to develop one efficient pipeline.
