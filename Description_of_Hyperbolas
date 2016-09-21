@@ -1,0 +1,8 @@
+In the .png file, two hyperbolas are shown. These hyperbolas show the locus of points in which the emitter can possibly be found.
+The black hyperbola is the locus found by analyzing receivers "A" and "B." The red hyperbola is the locus found by analyzing receivers
+"A" and "C." *A corresponds to (.5,0), B (-.5, 0), and C (0, 1).
+
+When graphed together, these two hyperbola intersect at exactly two points. The upper-left hand intersection (-3.503, 4.004) is correct; 
+the other solution (.405, -.273) is erroneous. This can be easily seen by considering that the TDoA of receiver C is 0, while the TDoA's
+of receivers A and B are greater than zero. Thus, the emitter must be closer to C than A and B. Only the first solution satisfies this
+condition.
